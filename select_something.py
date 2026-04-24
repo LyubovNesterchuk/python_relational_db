@@ -4,6 +4,9 @@ from sqlite3 import Error
 
 from connect import create_connection, database
 
+import pandas as pd
+
+
 def select_projects(conn):
     """
     Query all rows in the tasks table
@@ -79,7 +82,6 @@ Query task by status:
 '''
 
 
-import pandas as pd
 
 df = pd.DataFrame(projects, columns=[
     "id", "name", "start_date", "end_date"

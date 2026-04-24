@@ -77,3 +77,20 @@ Query all tasks
 Query task by status:
 [(1, 'Analyze the requirements of the app', 1, 1, 1, '2022-01-01', '2022-01-02')]
 '''
+
+
+import pandas as pd
+
+df = pd.DataFrame(projects, columns=[
+    "id", "name", "start_date", "end_date"
+])
+
+print(df)
+print(df.to_string(index=False))
+
+df_tasks = pd.DataFrame(tasks, columns=[
+    "id", "name", "priority", "project_id",
+    "status", "begin_date", "end_date"
+])
+
+print(df_tasks)
